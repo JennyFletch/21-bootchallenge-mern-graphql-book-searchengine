@@ -51,7 +51,7 @@ const resolvers = {
     },
     removeBook: async (parent, { userId, book }) => {
       return User.findOneAndUpdate(
-        { _id: usereId },
+        { _id: userId },
         { $pull: { savedBooks: book } },
         { new: true }
       );
